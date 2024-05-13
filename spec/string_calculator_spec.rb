@@ -10,6 +10,16 @@ RSpec.describe StringCalculator do
       end
     end
 
-    # More test cases will be added here as we progress with the development.
+    context 'when given a single number' do
+      it 'returns the number' do
+        expect(StringCalculator.add('1')).to eq(1)
+      end
+    end
+
+    context 'when given two numbers' do
+      it 'returns the sum of the numbers' do
+        expect(StringCalculator.add('1,5')).to eq(6)
+      end
+    end
   end
 end

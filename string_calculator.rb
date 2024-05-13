@@ -2,6 +2,6 @@
 
 class StringCalculator
   def self.add(numbers)
-    # implementation will go here
+    numbers.empty? ? 0 : numbers.split(',').map(&:to_i).reduce(:+)
   end
 end
